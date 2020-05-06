@@ -20,6 +20,9 @@ RUN apt-get -y install \
     libxtst6
 
 RUN curl -L https://zoom.us/client/latest/zoom_amd64.deb > /tmp/zoom.deb
+
+RUN apt-get -y install \
+    ibus
 RUN dpkg -i /tmp/zoom.deb && rm /tmp/zoom.deb
 RUN rm -rf /var/lib/apt/lists/*
 
